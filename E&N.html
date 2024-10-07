@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestra Boda Evelyn y Nahun</title>
+font-family: Dancing Script
+</head>
+<style>
+<body>
+body {
+    margin: 0;
+    pudding: 0;
+    background: url (elegante floral gris.jpg);
+    background-size: cover
+    background-position: center;
+    font- family: sans-serif;
+    background-repeat: no-repeat;
+}
+</body>
+</style>
+
+<style>
+
+td {border-style: solid;
+    border-color: #cccccc;
+ border-width: 0px;
+color: #E8B34B;
+padding: 0px;
+font-size: 30px;
+font-family: Arial;
+ text-align: center;}
+
+th {
+ border-width: 0px;
+color: #7F7F7F;
+ text-align: center;
+padding: 0px;
+font-size: 12px;
+font-family: Times New Roman;}
+ 
+</style>
+
+
+  <body>
+
+    <!-- Contador regresivo -->
+    <section>
+   
+
+<table align="center" width="90%">
+    <tr>
+      <td><span id="days"></span></td>
+      <td><span id="hours"></th>
+      <td><span id="minutes"></span></td>
+      <td><span id="seconds"></span></td>
+    </tr>
+    <tr >
+      <th>Dias</th>
+      <th>Horas</th>
+      <th>Minutos</th>
+     <th>Segundos</th>
+    </tr>
+</table>
+
+    </section> 
+    <!-- Fin contador regresivo -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => { 
+
+        //===
+        // VARIABLES
+        //===
+        const DATE_TARGET = new Date('03/16/2024 1:01 PM');
+        // DOM for render
+        const SPAN_DAYS = document.querySelector('span#days');
+        const SPAN_HOURS = document.querySelector('span#hours');
+        const SPAN_MINUTES = document.querySelector('span#minutes');
+        const SPAN_SECONDS = document.querySelector('span#seconds');
+        // Milliseconds for the calculations
+        const MILLISECONDS_OF_A_SECOND = 1000;
+        const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+        const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+
+        //===
+        // FUNCTIONS
+        //===
+
+        /**
+        * Method that updates the countdown and the sample
+        */
+        function updateCountdown() {
+            // Calcs
+            const NOW = new Date()
+            const DURATION = DATE_TARGET - NOW;
+            const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+            const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+            const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+            const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+            //
+
+            // Render
+            SPAN_DAYS.textContent = REMAINING_DAYS;
+            SPAN_HOURS.textContent = REMAINING_HOURS;
+            SPAN_MINUTES.textContent = REMAINING_MINUTES;
+            SPAN_SECONDS.textContent = REMAINING_SECONDS;
+        }
+
+        //===
+        // INIT
+        //===
+        updateCountdown();
+        // Refresh every second
+        setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+    });
+    </script>
+
+
+<audio controls>
+<source src="Creo en ti - Reik (Karaoke).mp3" type="audio/mpeg">
+  Tu navegador no soporta este formato de audio HTML5
+</audio>
+<p>
+ Dios junto nuestras manos y nos señaló el camino. nosotros uniremos nuestras vidas y lo recorreremos con amor y fe.
+
+Nos Casamos
+
+ Tenemos el honor de invitarlos a celebrar con nosotros esta fecha tan importante
+  </body>
+</html>
+
+</body>
+</html>
